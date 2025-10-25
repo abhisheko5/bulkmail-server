@@ -1,6 +1,6 @@
 import express from "express";
 import multer from "multer";
-import { sendBulkEmail } from "../services/emailService.js";
+import { sendBulkEmail } from "../controllers/mailController.js";
 
 const router = express.Router();
 const upload = multer(); // memory storage

@@ -4,6 +4,7 @@ import dotenv from "dotenv";
 
 
 import emailRoutes from "./routes/emailRoutes.js"; // make sure path is correct
+import jobRoutes from "./routes/jobRoutes.js"; // make sure path is correct
 
 dotenv.config();
 
@@ -18,6 +19,7 @@ app.use(express.urlencoded({ extended: true, limit: "10mb" }));
 
 
 app.use("/api/email", emailRoutes); 
+app.use("/api/job", jobRoutes); 
 
 // Root route
 app.get("/", (req, res) => {

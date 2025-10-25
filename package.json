@@ -5,17 +5,20 @@
   "type": "module",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon src/server.js"
+    "dev": "nodemon src/server.js",
+    "start": "nodemon src/workers/emailWorker.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "bull": "^4.16.5",
     "cors": "^2.8.5",
     "dotenv": "^17.2.3",
     "express": "^5.1.0",
     "multer": "^2.0.2",
+    "node-cron": "^4.2.1",
     "nodemailer": "^7.0.10",
     "xlsx": "^0.18.5"
   },
