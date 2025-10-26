@@ -25,6 +25,8 @@ export const sendBulkEmail = async (req, res) => {
       { attempts: 3, backoff: 10000 } // retry 3 times, 10s delay between
     );
 
+    console.log(emailQueue.length)
+
     res.status(200).json({
       message: `Email job queued successfully for ${emails.length} recipients.`,
     });
